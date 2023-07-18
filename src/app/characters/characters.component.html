@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <h2>Random Characters</h2>
+    <div class="row">
+        <div class="col-md-3 mb-3" *ngFor="let character of characters">
+            <div class="card">
+                <img [src]="character.image" alt="{{ character.name }}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ character.name }}</h5>
+                    <a [routerLink]="['/detalle', character.id]" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
